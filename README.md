@@ -47,7 +47,7 @@ ipride_calenadarモジュールをお使いのDrupal8にインストールしま
 <br>
 次にカレンダーの設定ページ( ＜DrupalのURL＞/admin/config/ipride/calendar )にアクセスして、各項目を全て入力し、「保存」してください
 * カレンダーサーバ
-  * カレンダーサーバのエンドポイントURLを入力してください。(eg. http://localhost/sabredav/public/calendarserver.php/)
+  * カレンダーサーバのエンドポイントURLを入力してください。(eg. http://localhost/sabredav/public/calendarserver.php/)
 * カレンダーのデータベース(MYSQL)
   * カレンダーサーバが利用しているDBの接続情報を入力してください。
 
