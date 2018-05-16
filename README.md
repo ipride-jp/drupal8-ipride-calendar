@@ -16,7 +16,7 @@
 配置したDrupalAuthCallback.phpを開き、以下のコードを修正します。
 ```
 // Drupal8のcoreディレクトリへのpathを正しく指定してください。
-define ('DRUPAL_CORE_PATH', '/var/www/html/drupal_/core');
+define ('DRUPAL_CORE_PATH', '/var/www/html/drupal_dir/core');
 ```
 #### 1.2 認証設定の変更
 calendarserver.php(sabredavのカレンダーサーバファイル)を開き、以下を追記します。
