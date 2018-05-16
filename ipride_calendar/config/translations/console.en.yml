@@ -1,0 +1,8 @@
+command:
+    ipride_calendar:
+        create:
+            description: 'Create a calendar'
+            options:
+                user_name: 'The name of user'
+                calendar_name: 'The name of calendar'
+                color: 'The color of calendar'

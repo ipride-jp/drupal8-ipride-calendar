@@ -1,0 +1,7 @@
+name: ipride calendar
+type: module
+description: ipride calendar
+core: 8.x
+package: ipride
+configure: ipride_calendar.config
+version: 8.x-1.0

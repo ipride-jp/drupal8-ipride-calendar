@@ -1,0 +1,20 @@
+<table class="week-calendar-table">
+  {% for date in dates %}
+  <tr data-ymd="{{date|date('Y-m-d')}}">
+    <th class="weekday {{ date_class_strs[date.timestamp] }}">
+      {{ date.weekdayJp }}<br>
+      {{ date.day }}
+    </th>
+
+    <td class="{{ date_class_strs[date.timestamp] }}">
+      <div>
+        {{holiday_texts[date.timestamp]}}
+      </div>
+
+      {% for event in date_event_map[date.timestamp] %}
+        {% include 'event.html.twig' %}
+      {% endfor %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>

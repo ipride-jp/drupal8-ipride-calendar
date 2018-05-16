@@ -1,0 +1,133 @@
+ipride_calendar.event.add:
+  path: '//calendar/{view}/{date}/event/add'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\EventAddForm'
+    _title: '新規イベント'
+  requirements:
+    _permission: 'use calendar'
+
+ipride_calendar.event.view:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}/event/{event_id}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\EventViewForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\EventViewForm::title'
+  requirements:
+    _permission: 'use calendar'
+    view: month|week|day|list
+    date: \d+|current
+
+ipride_calendar.event.edit:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}/event/{event_id}/edit'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\EventEditForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\EventEditForm::title'
+  requirements:
+    _permission: 'use calendar'
+
+ipride_calendar.event.delete:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}/event/{event_id}/delete'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\EventDeleteForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\EventDeleteForm::title'
+  requirements:
+    _permission: 'use calendar'
+
+ipride_calendar.calendar.add:
+  path: '/calendar/{view}/{date}/calendar/add'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\CalendarAddForm'
+    _title: '新規カレンダー'
+  requirements:
+    _permission: 'use calendar'
+    view: month|week|day|list
+    date: \d+|current
+
+ipride_calendar.calendar.edit:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}/edit'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\CalendarEditForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\CalendarEditForm::title'
+  requirements:
+    _permission: 'use calendar'
+    view: month|week|day|list
+    date: \d+|current
+
+ipride_calendar.calendar.view:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\CalendarViewForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\CalendarViewForm::title'
+  requirements:
+    _permission: 'use calendar'
+    view: month|week|day|list
+    date: \d+|current
+
+ipride_calendar.calendar.delete:
+  path: '/calendar/{view}/{date}/calendar/{calendar_id}/delete'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\CalendarDeleteForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\CalendarDeleteForm::title'
+  requirements:
+    _permission: 'use calendar'
+    view: month|week|day|list
+    date: \d+|current
+
+ipride_calendar.month:
+  path: '/calendar/month/{date}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\MonthCalendarForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\MonthCalendarForm::title'
+  requirements:
+    _permission: 'use calendar'
+    date: \d+|current
+
+ipride_calendar.week:
+  path: '/calendar/week/{date}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\WeekCalendarForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\WeekCalendarForm::title'
+  requirements:
+    _permission: 'use calendar'
+    date: \d+|current
+
+ipride_calendar.day:
+  path: '/calendar/day/{date}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\DayCalendarForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\DayCalendarForm::title'
+  requirements:
+    _permission: 'use calendar'
+    date: \d+|current
+
+ipride_calendar.list:
+  path: '/calendar/list/{date}'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\ListCalendarForm'
+    _title_callback: '\Drupal\ipride_calendar\Form\ListCalendarForm::title'
+  requirements:
+    _permission: 'use calendar'
+    date: \d+|current
+
+ipride.admin_index:
+  path: '/admin/config/ipride'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'iPride'
+  requirements:
+    _permission: 'access administration pages'
+
+ipride_calendar.config:
+  path: '/admin/config/ipride/calendar'
+  defaults:
+    _title: 'カレンダー'
+    _form: 'Drupal\ipride_calendar\Form\CalendarConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+
+ipride_calendar.to_do.list:
+  path: '/to_do'
+  defaults:
+    _form: '\Drupal\ipride_calendar\Form\TodoForm'
+    _title: 'ToDo'
+  requirements:
+    _permission: 'use calendar'
