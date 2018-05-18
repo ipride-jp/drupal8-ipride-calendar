@@ -2,9 +2,10 @@
 ## ipride_calendarモジュールについて
 このモジュールはカレンダーサーバ(sabredav)との連携機能と、それに付随するGUIを提供します。
 
-*スクリーンショット*
+*スクリーンショット:カレンダー画面*
 ![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_calendar.png)
 
+*スクリーンショット:イベント画面*
 ![イベント画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_event.png)
 
 ## 前提
