@@ -2,6 +2,11 @@
 ## ipride_calendarモジュールについて
 このモジュールはカレンダーサーバ(sabredav)との連携機能と、それに付随するGUIを提供します。
 
+*スクリーンショット*
+![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_calendar.png)
+
+![イベント画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_event.png)
+
 ## 前提
 * Drupalのバージョンは8.5.2以上推奨。
 * カレンダーサーバ(calDAV)として[sabredav](http://sabre.io/)が利用可能であること。
