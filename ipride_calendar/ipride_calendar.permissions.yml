@@ -1,4 +1,0 @@
-use calendar:
-  title: 'Use ipride calendar'
-  description: 'Use ipride calendar'
-  restrict access: true
