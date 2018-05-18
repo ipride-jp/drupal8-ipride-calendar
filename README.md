@@ -1,21 +1,31 @@
 # drupal8-ipride-calendar
 ## ipride_calendarモジュールについて
 このモジュールはカレンダーサーバ(sabredav)との連携機能と、それに付随するGUIを提供します。
+(インストール方法については後述の「インストール方法」をご覧ください)
 
-*スクリーンショット:カレンダー画面*
-![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_calendar.png)
+*スクリーンショット:カレンダー(月)画面*
+![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_month.png)
+
+*スクリーンショット:カレンダー(週)画面*
+![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_week.png)
+
+*スクリーンショット:カレンダー(日)画面*
+![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_day.png)
+
+*スクリーンショット:カレンダー(リスト)画面*
+![カレンダー画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_list.png)
 
 *スクリーンショット:イベント画面*
 ![イベント画面](https://github.com/ipride-jp/drupal8-ipride-calendar/blob/images/screenshot_event.png)
 
-## 前提
+## インストール方法
+### 前提
 * Drupalのバージョンは8.5.2以上推奨。
 * カレンダーサーバ(calDAV)として[sabredav](http://sabre.io/)が利用可能であること。
   * sabredav 3.22で動作確認済み。
 * カレンダーサーバのDBはMySqlであること。
 * カレンダーサーバと同じマシン上にDrupal8がインストールされている、またはDrupal8のcoreディレクトリ以下全てが配置されていること。
 
-## インストール方法
 ### 1 カレンダーサーバの変更
 #### 1.1 DrupalAuthCallback.phpの追加
  ＜sabredavのインストールディレクトリ＞/vendor 下に[DrupalAuthCallback.php](https://github.com/ipride-jp/drupal8-ipride-calendar/tree/master/sabredav)をコピーして配置します。<br>
